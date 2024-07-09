@@ -1,0 +1,20 @@
+{
+  "name": "hapi-mpti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "eslint": "^9.6.0",
+    "globals": "^15.8.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "linebreak-style": ["error", "windows"],
+        "indent": ["error", 4, { "ignoredNodes": ["ConditionalExpression"] }, "tab"],
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "import/no-extraneous-dependencies": ["error", {"includeInternal": true, "includeTypes": true}]
+    }
+}

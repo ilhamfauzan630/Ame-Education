@@ -59,7 +59,7 @@ class FormService {
 
     async getFormByUserId(userId) {
         const query = {
-            text: 'SELECT * FROM form WHERE user_id = $1',
+            text: 'SELECT * FROM courses INNER JOIN form ON form.id = courses.form_id WHERE user_id = $1',
             values: [userId],
         };
 

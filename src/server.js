@@ -15,14 +15,14 @@ const LoginService = require('./services/postgres/LoginService');
 const LoginValidator = require('./validator/login');
 
 // form
-// const form = require('./api/form');
-// const FormService = require('./services/postgres/FormService');
-// const FormValidator = require('./validator/form');
+const form = require('./api/form');
+const FormService = require('./services/postgres/FormService');
+const FormValidator = require('./validator/form');
 
 const init = async () => {
     const usersService = new UsersService();
     const loginService = new LoginService();
-    // const formService = new FormService();
+    const formService = new FormService();
 
     const server = Hapi.server({
         port: process.env.PORT,
@@ -48,13 +48,13 @@ const init = async () => {
                 validator: LoginValidator,
             },
         },
-        // {
-        //     plugin: form,
-        //     options: {
-        //         service: formService,
-        //         validator: FormValidator,
-        //     },
-        // }
+        {
+            plugin: form,
+            options: {
+                service: formService,
+                validator: FormValidator,
+            },
+        }
     ]);
 
     server.ext('onPreResponse', (request, h) => {

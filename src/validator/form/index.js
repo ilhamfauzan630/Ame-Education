@@ -2,7 +2,7 @@ const InvariantError = require('../../exceptions/InvariantError');
 const { FormPayloadSchema } = require('./schema');
 
 const FormValidator = {
-    validateUserPayload: (payload) => {
+    validateFormPayload: (payload) => {
         const validationResult = FormPayloadSchema.validate(payload);
 
         if (validationResult.error) {

@@ -10,20 +10,52 @@ exports.shorthands = undefined;
  */
 exports.up = (pgm) => {
     pgm.createTable('form', {
-        id: {
+        id : {
             type: 'VARCHAR(50)',
             primaryKey: true,
         },
-        username: {
+        nama: {
             type: 'VARCHAR(50)',
+            notNull: true,
+        },
+        alamat: {
+            type: 'TEXT',
             notNull: true,
         },
         phone: {
             type: 'VARCHAR(50)',
             notNull: true,
         },
-        password: {
+        ttl: {
             type: 'TEXT',
+            notNull: true,
+        },
+        pendidikan: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        agama: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        orangtua: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        pekerjaan: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        create_at: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        update_at: {
+            type: 'TEXT',
+            notNull: true,
+        },
+        user_id: {
+            type: 'VARCHAR(50)',
             notNull: true,
         },
     });

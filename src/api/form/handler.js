@@ -10,9 +10,9 @@ class FormHandler {
     async postFormHandler (request, h) {
         this._validator.validateFormPayload(request.payload);
 
-        const { nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId } = request.payload;
+        const { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId } = request.payload;
 
-        const formId = await this._service.addForm({ nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId});
+        const formId = await this._service.addForm({ nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId});
 
         const response = h.response({
             status: 'success',
@@ -27,12 +27,12 @@ class FormHandler {
 
     async getFormByIdHandler (request) {
         const { id } = request.params;
-        const form = await this._service.getFormById(id);
+        const forms = await this._service.getFormById(id);
 
         return {
             status: 'success',
             data: {
-                form,
+                forms,
             },
         };
     }
@@ -47,13 +47,25 @@ class FormHandler {
         };
     }
 
+    async getFormByUserIdHandler (request) {
+        const { userId } = request.params;
+        const forms = await this._service.getFormByUserId(userId);
+
+        return {
+            status: 'success',
+            data: {
+                forms,
+            },
+        };
+    }
+
     async putFormByIdHandler (request, h) {
         this._validator.validateFormPayload(request.payload);
 
         const { id } = request.params;
-        const { nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId } = request.payload;
+        const { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId } = request.payload;
 
-        await this._service.editFormById(id, { nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId });
+        await this._service.editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId });
 
         return {
             status: 'success',

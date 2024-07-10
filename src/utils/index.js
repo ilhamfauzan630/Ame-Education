@@ -1,5 +1,8 @@
 const mapDBToModelForm = ({
     id,
+    nama_kursus,
+    jumlah_pertemuan,
+    harga,
     nama,
     alamat,
     phone,
@@ -8,11 +11,14 @@ const mapDBToModelForm = ({
     agama,
     orangtua,
     pekerjaan,
-    created_at,
-    updated_at,
+    create_at,
+    update_at,
     user_id,
 }) => ({
     id,
+    namaKursus: nama_kursus,
+    jumlahPertemuan: jumlah_pertemuan,
+    harga,
     nama,
     alamat,
     phone,
@@ -21,8 +27,8 @@ const mapDBToModelForm = ({
     agama,
     orangtua,
     pekerjaan,
-    createdAt: created_at,
-    updatedAt: updated_at,
+    createdAt: create_at,
+    updatedAt: update_at,
     userId: user_id,
 });
 

@@ -15,6 +15,11 @@ const routes = (handler) => [
         handler: (request, h) => handler.getFormByIdHandler(request, h),
     },
     {
+        method: 'GET',
+        path: '/form/user/{userId}',
+        handler: (request, h) => handler.getFormByUserIdHandler(request, h),
+    },
+    {
         method: 'PUT',
         path: '/form/{id}',
         handler: (request, h) => handler.putFormByIdHandler(request, h),

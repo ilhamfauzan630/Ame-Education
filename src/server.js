@@ -9,6 +9,11 @@ const users = require('./api/users');
 const UsersService = require('./services/postgres/UserService');
 const UsersValidator = require('./validator/users');
 
+// admin
+const admin = require('./api/admin');
+const AdminService = require('./services/postgres/AdminService');
+const AdminValidator = require('./validator/admin');
+
 // login
 const login = require('./api/login');
 const LoginService = require('./services/postgres/LoginService');
@@ -21,6 +26,7 @@ const FormValidator = require('./validator/form');
 
 const init = async () => {
     const usersService = new UsersService();
+    const adminService = new AdminService();
     const loginService = new LoginService();
     const formService = new FormService();
 
@@ -54,7 +60,14 @@ const init = async () => {
                 service: formService,
                 validator: FormValidator,
             },
-        }
+        },
+        {
+            plugin: admin,
+            options: {
+                service: adminService,
+                validator: AdminValidator,
+            },
+        },
     ]);
 
     server.ext('onPreResponse', (request, h) => {

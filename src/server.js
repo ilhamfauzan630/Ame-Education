@@ -31,7 +31,7 @@ const init = async () => {
     const formService = new FormService();
 
     const server = Hapi.server({
-        port: process.env.NODE_ENV !== 'production' ? '8000' : '5000',
+        port: process.env.NODE_ENV !== 'production' ? 8000 : 5000,
         host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
         routes: {
             cors: {

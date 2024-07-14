@@ -9,7 +9,7 @@ class LoginService {
 
     async verifyUserCredential(phone, password) {
         const query = {
-            text: 'SELECT id, password FROM users WHERE phone = $1',
+            text: 'SELECT id, username, password FROM users WHERE phone = $1',
             values: [phone],
         };
 
@@ -19,7 +19,7 @@ class LoginService {
             throw new NotFoundError('Username atau password yang Anda berikan salah');
         }
 
-        const { id, password: hashedPassword } = result.rows[0];
+        const { id, username, password: hashedPassword } = result.rows[0];
 
         const match = await bcrypt.compare(password, hashedPassword);
 
@@ -27,7 +27,10 @@ class LoginService {
             throw new NotFoundError('Username atau password yang Anda berikan salah');
         }
 
-        return id;
+        return {
+            id,
+            username,
+        }
     }
 }
 

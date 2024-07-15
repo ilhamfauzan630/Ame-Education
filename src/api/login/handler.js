@@ -8,13 +8,14 @@ class LoginHandler {
 
     async verifyUserCredentialHandler(request, h) {
         const { phone, password } = request.payload;
-        const userId = await this._service.verifyUserCredential(phone, password);
+        const { id, username } = await this._service.verifyUserCredential(phone, password);
 
         const response = h.response( {
             status: 'success',
             message: 'login berhasil',
             data: {
-                userId,
+                id,
+                username,
             },
         });
 

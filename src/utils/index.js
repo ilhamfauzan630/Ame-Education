@@ -14,6 +14,7 @@ const mapDBToModelForm = ({
     create_at,
     update_at,
     user_id,
+    status,
 }) => ({
     id,
     namaKursus: nama_kursus,
@@ -30,6 +31,7 @@ const mapDBToModelForm = ({
     createdAt: create_at,
     updatedAt: update_at,
     userId: user_id,
+    status,
 });
 
 module.exports = { mapDBToModelForm };

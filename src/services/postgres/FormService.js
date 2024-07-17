@@ -72,12 +72,12 @@ class FormService {
         return result.rows.map(mapDBToModelForm);
     }
 
-    async editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId}) {
+    async editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status}) {
         const updateAt = new Date().toISOString();
 
         const form_query = {
-            text: 'UPDATE form SET nama = $1, alamat = $2, phone = $3, ttl = $4, pendidikan = $5, agama = $6, orangtua = $7, pekerjaan = $8, user_id = $9, update_at = $10 WHERE id = $11 RETURNING id',
-            values: [nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, updateAt, id],
+            text: 'UPDATE form SET nama = $1, alamat = $2, phone = $3, ttl = $4, pendidikan = $5, agama = $6, orangtua = $7, pekerjaan = $8, user_id = $9, update_at = $10, status = $11 WHERE id = $12 RETURNING id',
+            values: [nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, updateAt, status, id],
         };
 
         const course_query = {

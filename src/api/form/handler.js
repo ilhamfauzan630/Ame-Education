@@ -63,9 +63,9 @@ class FormHandler {
         this._validator.validateFormPayload(request.payload);
 
         const { id } = request.params;
-        const { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId } = request.payload;
+        const { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status } = request.payload;
 
-        await this._service.editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId });
+        await this._service.editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status });
 
         return {
             status: 'success',

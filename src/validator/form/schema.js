@@ -13,6 +13,7 @@ const FormPayloadSchema = Joi.object({
     orangtua: Joi.string().required(),
     pekerjaan: Joi.string().required(),
     userId: Joi.string().required(),
+    status: Joi.string(),
 });
 
 module.exports = { FormPayloadSchema };

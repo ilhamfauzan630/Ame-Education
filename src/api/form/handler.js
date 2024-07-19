@@ -60,12 +60,12 @@ class FormHandler {
     }
 
     async putFormByIdHandler (request, h) {
-        this._validator.validateFormPayload(request.payload);
+        this._validator.validateUpdateFormPayload(request.payload);
 
         const { id } = request.params;
-        const { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status } = request.payload;
+        const { status } = request.payload;
 
-        await this._service.editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status });
+        await this._service.editFormById(id, status );
 
         return {
             status: 'success',

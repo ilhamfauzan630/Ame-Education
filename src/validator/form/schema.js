@@ -16,4 +16,8 @@ const FormPayloadSchema = Joi.object({
     status: Joi.string(),
 });
 
-module.exports = { FormPayloadSchema };
+const UpdateFormPayloadSchema = Joi.object({
+    status: Joi.string().required(),
+});
+
+module.exports = { FormPayloadSchema, UpdateFormPayloadSchema };

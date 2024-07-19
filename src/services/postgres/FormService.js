@@ -72,22 +72,15 @@ class FormService {
         return result.rows.map(mapDBToModelForm);
     }
 
-    async editFormById(id, { nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, status}) {
+    async editFormById(id, status) {
         const updateAt = new Date().toISOString();
 
         const form_query = {
-            text: 'UPDATE form SET nama = $1, alamat = $2, phone = $3, ttl = $4, pendidikan = $5, agama = $6, orangtua = $7, pekerjaan = $8, user_id = $9, update_at = $10, status = $11 WHERE id = $12 RETURNING id',
-            values: [nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId, updateAt, status, id],
-        };
-
-        const course_query = {
-            text: 'UPDATE courses SET nama_kursus = $1, jumlah_pertemuan = $2, harga = $3 WHERE form_id = $4',
-            values: [nama_kursus, jumlah_pertemuan, harga, id],
+            text: 'UPDATE form SET update_at = $1, status = $2 WHERE id = $3 RETURNING id',
+            values: [updateAt, status, id],
         };
 
         const result = await this._pool.query(form_query);
-
-        await this._pool.query(course_query);
 
         if (!result.rows.length) {
             throw new NotFoundError('Form tidak ditemukan');

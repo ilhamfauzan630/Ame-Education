@@ -20,6 +20,16 @@ const routes = (handler) => [
         handler: (request, h) => handler.getFormByUserIdHandler(request, h),
     },
     {
+        method: 'GET',
+        path: '/form/active',
+        handler: (request, h) => handler.getActiveFormsHandler(request, h),
+    },
+    {
+        method: 'GET',
+        path: '/form/pending',
+        handler: (request, h) => handler.getPendingFormsHandler(request, h),
+    },
+    {
         method: 'PUT',
         path: '/form/{id}',
         handler: (request, h) => handler.putFormByIdHandler(request, h),

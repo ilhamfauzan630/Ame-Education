@@ -108,6 +108,28 @@ class FormService {
             throw new NotFoundError('Form tidak ditemukan atau sudah terhapus');
         }
     }
+
+    async getActiveForms() {
+        const query = {
+            text: 'SELECT * FROM courses INNER JOIN form ON form.id = courses.form_id WHERE status = $1',
+            values: ['active'],
+        };
+
+        const result = await this._pool.query(query);
+
+        return result.rows.map(mapDBToModelForm);
+    }
+
+    async getPendingForms() {
+        const query = {
+            text: 'SELECT * FROM courses INNER JOIN form ON form.id = courses.form_id WHERE status = $1',
+            values: ['pending'],
+        };
+
+        const result = await this._pool.query(query);
+
+        return result.rows.map(mapDBToModelForm);
+    }
 }
 
 module.exports = FormService;

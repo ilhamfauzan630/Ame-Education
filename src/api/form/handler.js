@@ -83,6 +83,26 @@ class FormHandler {
             message: 'Form berhasil dihapus',
         };
     }
+
+    async getActiveFormsHandler () {
+        const forms = await this._service.getActiveForms();
+        return {
+            status: 'success',
+            data: {
+                forms,
+            },
+        };
+    }
+
+    async getPendingFormsHandler () {
+        const forms = await this._service.getPendingForms();
+        return {
+            status: 'success',
+            data: {
+                forms,
+            },
+        };
+    }
 }
 
 module.exports = FormHandler;

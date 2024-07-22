@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ba5cba87.css",
-    "main.js": "/static/js/main.b0d48541.js",
+    "main.js": "/static/js/main.76b3e8c2.js",
     "static/media/logoAMA.jpg": "/static/media/logoAMA.704269a5cd51fc5adf02.jpg",
     "static/media/logoTK.png": "/static/media/logoTK.268f1fb6e8e4406a7b48.png",
     "static/media/logoSMP.jpeg": "/static/media/logoSMP.51f44d3cde8df0aa0bdf.jpeg",
@@ -10,10 +10,10 @@
     "static/media/logoSMA.jpeg": "/static/media/logoSMA.03d54e3d46f27185ddc4.jpeg",
     "index.html": "/index.html",
     "main.ba5cba87.css.map": "/static/css/main.ba5cba87.css.map",
-    "main.b0d48541.js.map": "/static/js/main.b0d48541.js.map"
+    "main.76b3e8c2.js.map": "/static/js/main.76b3e8c2.js.map"
   },
   "entrypoints": [
     "static/css/main.ba5cba87.css",
-    "static/js/main.b0d48541.js"
+    "static/js/main.76b3e8c2.js"
   ]
 }

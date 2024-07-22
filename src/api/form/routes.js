@@ -1,42 +1,42 @@
 const routes = (handler) => [
     {
         method: 'POST',
-        path: '/form',
+        path: '/api/form',
         handler: (request, h) => handler.postFormHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/form',
+        path: '/api/form',
         handler: (request, h) => handler.getFormsHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/form/{id}',
+        path: '/api/form/{id}',
         handler: (request, h) => handler.getFormByIdHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/form/user/{userId}',
+        path: '/api/form/user/{userId}',
         handler: (request, h) => handler.getFormByUserIdHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/form/active',
+        path: '/api/form/active',
         handler: (request, h) => handler.getActiveFormsHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/form/pending',
+        path: '/api/form/pending',
         handler: (request, h) => handler.getPendingFormsHandler(request, h),
     },
     {
         method: 'PUT',
-        path: '/form/{id}',
+        path: '/api/form/{id}',
         handler: (request, h) => handler.putFormByIdHandler(request, h),
     },
     {
         method: 'DELETE',
-        path: '/form/{id}',
+        path: '/api/form/{id}',
         handler: (request, h) => handler.deleteFormByIdHandler(request, h),
     },
 ];

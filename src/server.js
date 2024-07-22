@@ -1,5 +1,7 @@
 require('dotenv').config();
 const Hapi = require('@hapi/hapi');
+const Path = require('path');
+const Inert = require('@hapi/inert');
 
 // exeptions
 const ClientError = require('./exceptions/ClientError');
@@ -36,8 +38,22 @@ const init = async () => {
         routes: {
             cors: {
                 origin: ['*'],
-            },
+            }
         },
+    });
+
+    await server.register(Inert);
+
+    server.route({
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: './public',
+                redirectToSlash: true,
+                index: true,
+            }
+        }
     });
 
     await server.register([{

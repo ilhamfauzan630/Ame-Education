@@ -1,17 +1,17 @@
 const routes = (handler) => [
     {
         method: 'POST',
-        path: '/admin',
+        path: '/api/admin',
         handler: (request, h) => handler.postAdminHandler(request, h),
     },
     {
         method: 'GET',
-        path: '/admin/{id}',
+        path: '/api/admin/{id}',
         handler: (request, h) => handler.getAdminByIdHandler(request, h),
     },
     {
         method: 'POST',
-        path: '/admin/verify',
+        path: '/api/admin/verify',
         handler: (request, h) => handler.verifyAdminCredentialHandler(request, h),
     }
 ];

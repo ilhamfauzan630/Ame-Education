@@ -37,10 +37,21 @@ const init = async () => {
         host: process.env.HOST,
         routes: {
             cors: {
-                origin: ['*'],
-                headers: ["Accept", "Content-Type"],
-                additionalHeaders: ["X-Requested-With"],
-            },
+                origin: [
+                    'http://localhost:3000',
+                    'https://amaeducation.my.id/'
+                ],
+                additionalHeaders: [
+                    'Access-Control-Allow-Origin',
+                    'Access-Control-Request-Method',
+                    'Allow-Origin',
+                    'Origin',
+                    'access-control-allow-origin',
+                    'access-control-request-method',
+                    'allow-origin',
+                    'origin',
+                ]
+            }
         },
     });
 

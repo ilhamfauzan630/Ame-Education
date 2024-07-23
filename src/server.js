@@ -26,6 +26,9 @@ const form = require('./api/form');
 const FormService = require('./services/postgres/FormService');
 const FormValidator = require('./validator/form');
 
+// react routing
+const static = require('./api/static');
+
 const init = async () => {
     const usersService = new UsersService();
     const adminService = new AdminService();
@@ -38,7 +41,7 @@ const init = async () => {
         routes: {
             cors: {
                 origin: ['*'],
-            }
+            },
         },
     });
 
@@ -55,6 +58,8 @@ const init = async () => {
             }
         }
     });
+
+    server
 
     await server.register([{
             plugin: users,
@@ -84,6 +89,9 @@ const init = async () => {
                 validator: AdminValidator,
             },
         },
+        {
+            plugin: static
+        }
     ]);
 
     server.ext('onPreResponse', (request, h) => {

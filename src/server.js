@@ -39,7 +39,7 @@ const init = async () => {
             cors: {
                 origin: [
                     'http://localhost:3000',
-                    'https://amaeducation.my.id/'
+                    'https://amaeducation.my.id'
                 ],
                 additionalHeaders: [
                     'Access-Control-Allow-Origin',

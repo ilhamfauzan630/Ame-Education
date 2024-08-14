@@ -1,0 +1,20 @@
+.containerRiwayatForm {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto; /* Center container horizontally with auto margin */
+    padding: 20px;
+    background-color: white;
+    transform: translate(0%, 5%);
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+.containerRiwayatDaftar {
+    width: 1200px; /* Atur lebar sesuai kebutuhan */
+    margin: 200px auto 80px auto; /* Pusatkan kontainer secara horizontal dan tambahkan margin untuk spasi vertikal */
+    padding: 20px; /* Tambahkan padding untuk estetika */
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk estetika */
+    overflow-x: auto; /* Tambahkan scroll horizontal jika tabel terlalu lebar */
+}

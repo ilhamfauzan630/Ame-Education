@@ -1,0 +1,17 @@
+.containerOutputForm {
+    width: 1200px; /* Atur lebar sesuai kebutuhan */
+    margin: 200px auto 80px auto; /* Pusatkan kontainer secara horizontal dan tambahkan margin untuk spasi vertikal */
+    padding: 20px; /* Tambahkan padding untuk estetika */
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk estetika */
+    overflow-x: auto; /* Tambahkan scroll horizontal jika tabel terlalu lebar */
+}
+
+.containerMenu {
+    padding: 20px; /* Tambahkan padding untuk keseluruhan kontainer menu */
+}
+
+.HeaderMenu, .TitleMenu {
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk spasi antar elemen */
+}

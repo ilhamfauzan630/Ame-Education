@@ -1,0 +1,168 @@
+.containerMenu{
+    flex-direction: column;
+    width: 1000px; /* Melebarkan container menjadi 80% dari lebar viewport */
+    height: 1000px; /* Mengatur tinggi container menjadi 80% dari tinggi viewport */
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.HeaderMenu {
+  position: absolute;
+  width: 245px;
+  height: 1000px;
+  left: 0px;
+  top: 0px;
+  background: #20258F;
+  border-radius: 0px 50px 50px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.HeaderMenu img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.HeaderMenu .username {
+  font-family: 'Offside';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.HeaderMenu nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.HeaderMenu nav ul li {
+  margin: 50px 0;
+}
+
+.HeaderMenu nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.HeaderMenu nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.HeaderLogout {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.TitleMenu {
+  position: absolute;
+  width: 229px;
+  height: 40px;
+  left: 690px;
+  top: 20px;
+
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  color: #000000;
+}
+
+/* Card Kelas */
+.cardM-container {
+  display: flex;
+  justify-content: space-around; /* atau gunakan space-between, space-evenly, atau flex-start sesuai kebutuhan */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Tambahkan ini jika ada lebih dari satu kartu untuk menyesuaikan layout */
+  
+}
+
+.cardM {
+  width: 236px;
+  background: white;
+  padding: 1px;
+  border-radius: 6px;
+  margin: 10px; /* Tambahkan margin untuk spasi antar kartu */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cardM-image {
+  background-color: white;
+  width: 100%;
+  height: 244px;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden; /* Tambahkan ini agar gambar tidak keluar dari batas elemen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardM-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Atur gambar agar cover seluruh elemen */
+  border-radius: inherit; /* Mewarisi border-radius dari .cardM-image */
+}
+
+.cardM-image:hover {
+  transform: scale(0.98);
+}
+
+.category {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category:hover {
+  cursor: pointer;
+}
+
+/*buttons */
+.buttonM {
+  background-color: #20258F;
+  color: white ;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.buttonM:hover {
+  background-color: #20258F;
+}
+
+.buttonM:focus {
+  outline: 2px solid rgba(0,0,0,0.1);
+  outline-offset: 2px;
+}
+
+.buttonM:focus-visible {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

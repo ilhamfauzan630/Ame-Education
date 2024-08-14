@@ -1,0 +1,209 @@
+.containerAnyMain {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    top: -230px;
+    left: 0px;
+    background-color: white !important;
+}
+
+.Sidemenu {
+    position: absolute !important;
+    width: 245px;
+    height: 1200px;
+    left: 0px;
+    top: 0px;
+    background: #20258F;
+    border-radius: 0px 50px 50px 0px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transform: translate(0%, 5%);
+}
+
+.Sidemenu img {
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.Sidemenu .username {
+    font-family: 'Offside';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.Sidemenu nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Sidemenu nav ul li {
+    margin: 50px 0;
+}
+
+.Sidemenu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.Sidemenu nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.SideLogout {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+.containertitle {
+    position: absolute;
+    width: 850px;
+    height: 60px;
+    top: 5%; /* Menempatkan kontainer lebih dekat ke bagian atas layar */
+    left: 57%; /* Menempatkan kontainer di tengah horizontal */
+    transform: translate(-50%, -5%); /* Menggeser kontainer ke tengah */
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex; /* Menggunakan Flexbox */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal */
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 200px;
+}
+
+.tekstitle {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 61px;
+    color: #000000;
+}
+
+
+.course-selection {
+    position: absolute;
+    display: flex; /* Menggunakan flexbox */
+    width: 1000px;
+    height: 50px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-40%, -10%);
+    background-color: white;
+    margin-bottom: 20px; /* Menambahkan jarak antara "Pilih Kursus" dan konten lainnya */
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+.containerjnj {
+    position: absolute;
+    width: 850px;
+    height: 50px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    margin-top: 100px;
+    
+}
+
+.containerjnj img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px; /* Memberi jarak antara gambar dan teks */
+}
+
+.containerjnj p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    margin: 0; /* Menghilangkan margin bawaan pada paragraf */
+}
+
+.containerpesan {
+    position: absolute;
+    width: 1200px;
+    height: 500px;
+    top: 65%;
+    left: 57%; /* Sesuaikan agar benar-benar di tengah horizontal */
+    transform: translate(-50%, -10%);
+    background-color: #EEEEEE;
+    justify-content: center; /* Menyelaraskan konten secara horizontal ke tengah */
+    align-items: center; /* Menyelaraskan konten secara vertikal ke tengah */
+    text-align: center; /* Menyelaraskan teks di tengah secara horizontal */
+    margin-top: 100px;
+    border: 1px solid black;
+}
+
+.containerpesan p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    margin: 0; /* Menghilangkan margin bawaan pada paragraf */
+}
+
+.teks {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    color: #000000;
+}
+
+/* .ButtonMenu {
+    position: absolute;
+    top: 140%;
+    left: 90%; 
+    transform: translate(-50%, -10%);
+}*/
+
+/* CSS */
+.buttonMenu {
+  background-color: #20258F;
+  border: 1px solid transparent;
+  top: 140%;
+  left: 90%;
+  width: 150px; 
+  height: 50px;
+  transform: translate(-50%, -10%);
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px .8em;
+  position: absolute;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+

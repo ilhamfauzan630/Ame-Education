@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Hapi = require('@hapi/hapi');
-const Path = require('path');
-const Inert = require('@hapi/inert');
+const vision = require('@hapi/vision');
+const inert = require('@hapi/inert');
 
 // exeptions
 const ClientError = require('./exceptions/ClientError');
@@ -25,6 +25,10 @@ const LoginValidator = require('./validator/login');
 const form = require('./api/form');
 const FormService = require('./services/postgres/FormService');
 const FormValidator = require('./validator/form');
+
+// static
+const static = require('./api/static');
+
 
 const init = async () => {
     const usersService = new UsersService();
@@ -55,6 +59,19 @@ const init = async () => {
         },
     });
 
+    // registrasi plugin eksternal
+    await server.register([
+        {
+            plugin: inert,
+        },
+        {
+            plugin: vision,
+        },
+        {
+            plugin: static,
+        },
+    ]);
+
     await server.register([{
             plugin: users,
             options: {
@@ -82,7 +99,8 @@ const init = async () => {
                 service: adminService,
                 validator: AdminValidator,
             },
-        }
+        },
+
     ]);
 
     server.ext('onPreResponse', (request, h) => {

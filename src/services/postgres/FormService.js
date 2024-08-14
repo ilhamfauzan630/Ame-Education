@@ -5,7 +5,13 @@ const { mapDBToModelForm, mapDBToModelFormCourse } = require('../../utils');
 
 class FormService {
     constructor () {
-        this._pool = new Pool();
+        this._pool = new Pool(
+            {
+                ssl: {
+                    rejectUnauthorized: false // Use this option if you don't have a valid SSL certificate
+                }
+            }
+        );
     }
 
     async addForm({ nama_kursus, jumlah_pertemuan, harga, nama, alamat, phone, ttl, pendidikan, agama, orangtua, pekerjaan, userId }) {

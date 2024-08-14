@@ -6,7 +6,13 @@ const NotFoundError = require('../../exceptions/NotFoundError');
 
 class UserService {
     constructor() {
-        this._pool = new Pool();
+        this._pool = new Pool(
+            {
+                ssl: {
+                    rejectUnauthorized: false // Use this option if you don't have a valid SSL certificate
+                }
+            }
+        );
     }
 
     async addUser({username, phone, password}) {

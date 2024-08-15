@@ -43,6 +43,7 @@ const init = async () => {
             cors: {
                 origin: [
                     'http://localhost:3000',
+                    'https://ama-education.vercel.app',
                     'https://amaeducation.my.id'
                 ],
                 additionalHeaders: [
